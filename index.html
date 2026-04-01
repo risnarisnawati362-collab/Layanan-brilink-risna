@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Layanan BRILink</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f9ff;
+}
+
+/* HEADER */
+header {
+    background: #0057b7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAV */
+nav {
+    background: #003f8a;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/* SECTION */
+section {
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* BUTTON */
+button {
+    background: #0057b7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003f8a;
+}
+
+/* OUTPUT */
+#output {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #003f8a;
+    color: white;
+    padding: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Layanan BRILink</h1>
+    <p>Mudah, Cepat, dan Aman</p>
+</header>
+
+<nav>
+    <a href="#">Beranda</a>
+    <a href="#">Layanan</a>
+    <a href="#">Transaksi</a>
+</nav>
+
+<section>
+    <h2>Tentang BRILink</h2>
+    <div class="card">
+        <p>
+            BRILink adalah layanan dari Bank BRI yang memungkinkan masyarakat melakukan transaksi perbankan 
+            melalui agen tanpa harus ke bank.
+        </p>
+    </div>
+
+    <h2>Jenis Layanan</h2>
+
+    <div class="card">
+        <h3>Transfer Uang</h3>
+        <button onclick="transaksi('Transfer berhasil')">Lakukan</button>
+    </div>
+
+    <div class="card">
+        <h3>Tarik Tunai</h3>
+        <button onclick="transaksi('Tarik tunai berhasil')">Lakukan</button>
+    </div>
+
+    <div class="card">
+        <h3>Bayar Tagihan</h3>
+        <button onclick="transaksi('Pembayaran berhasil')">Lakukan</button>
+    </div>
+
+    <div class="card">
+        <h3>Pulsa & Token Listrik</h3>
+        <button onclick="transaksi('Pembelian berhasil')">Lakukan</button>
+    </div>
+
+    <div id="output"></div>
+</section>
+
+<footer>
+    <p>© 2026 Layanan BRILink - by Risnawati</p>
+</footer>
+
+<script>
+function transaksi(pesan) {
+    document.getElementById("output").innerText = pesan;
+}
+</script>
+
+</body>
+</html>
